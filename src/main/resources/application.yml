@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: ComplainServiceApp
+  mongodb:
+    uri: mongodb+srv://ysaini9466_db_user:yashsaini10@cluster0.rkstdwn.mongodb.net/complainsdb?retryWrites=true&w=majority
+    auto-index-creation: true
+
+
+  kafka:
+    bootstrap-servers: pkc-921jm.us-east-2.aws.confluent.cloud:9092
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+    consumer:
+      group-id: complian-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "com.example.ComplainServiceApp.model"
+
+    properties:
+      security.protocol: SASL_SSL
+      sasl.mechanism: PLAIN
+      sasl.jaas.config: >
+        org.apache.kafka.common.security.plain.PlainLoginModule required
+        username="VJTSO2L5PBGH7OEC"
+        password="cflteNjk+ujJBAB5g4sJTec+nlMS4/0aa8MtHRuFlaLASEvlscxL5VkuzuPTtU+A";
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: 2428uiet.yashkumar@kuk.ac.in
+    password: yfjwtlbnfctefzxv
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+#server:
+#  port: 9090  POPTOUT000QHOHC
+#VJTSO2L5PBGH7OEC
+#cflteNjk+ujJBAB5g4sJTec+nlMS4/0aa8MtHRuFlaLASEvlscxL5VkuzuPTtU+A
