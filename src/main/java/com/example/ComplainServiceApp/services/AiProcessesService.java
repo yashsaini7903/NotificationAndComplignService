@@ -5,8 +5,10 @@ import com.example.ComplainServiceApp.model.CompainCreatedEvent;
 import com.example.ComplainServiceApp.entity.Complain;
 import com.example.ComplainServiceApp.repositry.ComplainRepositry;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -20,7 +22,8 @@ import java.util.concurrent.Executors;
 @Service
 @Slf4j
 public class AiProcessesService {
-    private String apiKey = "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";
+    @Value("${groq.api.key}")
+    private String apiKey;
 
     @Autowired
     private ComplainService complainService;

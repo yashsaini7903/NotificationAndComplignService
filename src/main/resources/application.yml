@@ -42,3 +42,6 @@ spring:
 #  port: 9090  POPTOUT000QHOHC
 #VJTSO2L5PBGH7OEC
 #cflteNjk+ujJBAB5g4sJTec+nlMS4/0aa8MtHRuFlaLASEvlscxL5VkuzuPTtU+A
+groq:
+  api:
+    key: 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
