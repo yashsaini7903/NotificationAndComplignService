@@ -157,7 +157,7 @@ public class AiProcessesService {
 
 //curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent" \
 //        -H 'Content-Type: application/json' \
-//        -H 'X-goog-api-key: AIzaSyAxlAvHFKNpBDDA-mf8vWPWjQJL-Yy_w64' \
+//        -H 'X-goog-api-key:
 //        -X POST \
 //        -d '{
 //        "contents": [
@@ -170,4 +170,4 @@ public class AiProcessesService {
 //        }
 //        ]
 //        }'
-// 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  -
+// -
